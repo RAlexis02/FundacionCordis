@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Cordis - [Nombre de la Página]</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS desde CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Inicio de la Barra Superior (Fija) -->
+    <div class="container-fluid top-bar fixed-top">
+        <div class="row gx-0 align-items-center justify-content-between">
+            <!-- Enlaces de Contacto a la Izquierda -->
+            <div class="col-lg-8 col-md-6 text-left">
+                <div class="d-inline-flex align-items-center">
+                    <a href="https://maps.app.goo.gl/SKhMN9ZjZyA8GUUD8" target="_blank"><i class="fas fa-map-marker-alt"></i> Encuéntranos</a>
+                    <a href="mailto:fundacioncordisoperaciones@gmail.com"><i class="fas fa-envelope"></i> fundacioncordisoperaciones@gmail.com</a>
+                </div>
+            </div>
+            <!-- Iconos de Redes Sociales a la Derecha -->
+            <div class="col-lg-4 col-md-6 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <a href="https://www.facebook.com/fundacioncordisecuador" class="btn btn-square border" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/fundacioncordis" class="btn btn-square border" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/593999065740" class="btn btn-square border" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin de la Barra Superior -->
+
+    <!-- Inicio de la Barra de Navegación (Fija) -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0 fixed-top" style="top: 45px;"> <!-- Ajustamos el top para que no solape con la barra superior -->
+            <!-- Logo y Nombre de la Fundación -->
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logoFC.png" alt="Logo Fundación Cordis" class="logo-img">
+                <h1 class="d-inline"><span>Fundación</span> Cordis</h1>
+            </a>
+            
+            <!-- Menú Hamburguesa para Dispositivos Móviles -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <!-- Enlaces a las Secciones de la Página -->
+                    <a href="index.html" class="nav-item nav-link" id="inicio-link">Inicio</a>
+                    <a href="about.html" class="nav-item nav-link" id="about-link">Acerca de Nosotros</a>
+                    <a href="services.html" class="nav-item nav-link" id="services-link">Servicios</a>
+                    <a href="contact.html" class="nav-item nav-link" id="contact-link">Contacto</a>
+
+                </div>
+                <!-- Botón de Donar -->
+                <a href="donate.html" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Donar Ahora</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Fin de la Barra de Navegación Fija -->
+
+    <!-- Ajuste en el contenido para que no se superponga con la barra fija -->
+    <div style="margin-top: 110px;">
+        <!-- Contenido de la página -->
+    </div>
+
+
+
+
+
+
+    <!-- Aquí va el contenido principal de cada página -->
+
+
+
+    <section class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="section-title text-uppercase text-dark font-weight-bold mb-4">Ayuda a Cambiar Vidas con tu Donación</h2>
+            <p class="lead text-muted mb-5">Tu apoyo es fundamental para continuar nuestra misión de inclusión social y bienestar. Cada aporte, sin importar su tamaño, marca la diferencia en la vida de muchas personas. ¡Gracias por tu generosidad!</p>
+        </div>
+    </section>
+
+    
+
+       <!-- Botones de donación -->
+<div class="container my-5 donation-container">
+    <h2 class="text-center">Haz tu Donación</h2>
+    <p class="text-center text-secondary">Ingresa el monto que deseas donar.</p>
+
+    <!-- Contenedor de botones y entrada -->
+    <div class="donation-selection">
+        <div class="donation-buttons">
+            <button class="donation-btn" data-amount="5">$5</button>
+            <button class="donation-btn" data-amount="10">$10</button>
+            <button class="donation-btn" data-amount="20">$20</button>
+            <button class="donation-btn" data-amount="50">$50</button>
+            <button class="donation-btn" data-amount="100">$100</button>
+            <button class="donation-btn" id="custom-amount-btn">Otro valor</button>
+        </div>
+        
+        <!-- Campo de donación personalizada -->
+        <div id="custom-amount-container" style="display: none;">
+            <input type="number" id="custom-amount" placeholder="Ingrese otro valor" min="1">
+            <span id="error-message" style="display: none;">Por favor, ingrese un valor válido (mayor a 1 USD).</span>
+        </div>
+    </div>
+
+    <!-- Mensaje de la donación -->
+    <p id="donation-message" class="text-center font-weight-bold" style="display:none;">Vas a donar $5 USD.</p>
+
+    <!-- Texto explicativo antes del botón de PayPal -->
+    <p id="donation-instruction" class="text-center text-secondary" style="display:none;">Haz clic en el botón para donar <span id="donation-amount">$5</span>.</p>
+
+    <!-- Botón de PayPal -->
+    <div id="paypal-button-container"></div>
+</div>
+
+<!-- Script de PayPal -->
+<script src="https://www.paypal.com/sdk/js?client-id=AUR_RjuO8ajlHSf71DbMrekU_SACOue5zOtUyhpa7xzZX6kQSSv6fUa1DwnBHSFsqPKlEwl_X6Zab1Rg&currency=USD"></script>
+
+        
+
+      
+      
+      
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Inicio del Pie de Página (Footer) -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Información de la Fundación -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Fundación Cordis</h5>
+                    <p>Nuestra misión es apoyar y respaldar a las personas con discapacidades.</p>
+                    <!-- Iconos de Redes Sociales -->
+                    <div class="d-flex">
+                        <a href="https://www.facebook.com/fundacioncordisecuador" class="btn btn-square border" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/fundacioncordis" class="btn btn-square border" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/593999065740" class="btn btn-square border" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Enlaces Rápidos -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light"><i class="fas fa-angle-right me-2"></i>Acerca de Nosotros</a></li>
+                        <li><a href="contact.html" class="text-light"><i class="fas fa-angle-right me-2"></i>Contacto</a></li>
+                        <li><a href="services.html" class="text-light"><i class="fas fa-angle-right me-2"></i>Servicios</a></li>
+                        <li><a href="donate.html" class="text-light"><i class="fas fa-angle-right me-2"></i>Donaciones</a></li>
+                    </ul>
+                </div>
+                <!-- Información de Contacto -->
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="mb-4">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Quito, Ecuador</li>
+                        <li><i class="fas fa-envelope me-2"></i> fundacioncordisoperaciones@gmail.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +593 0999056740</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <!-- Derechos Reservados -->
+            <div class="text-center">
+                &copy; 2024 Fundación Cordis. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+    <!-- Fin del Pie de Página -->
+    
+    
+
+    <!-- Bootstrap JS y dependencias desde CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+ 
+
+    <!-- Scripts Propios -->
+    <script src="js/menu.js"></script>
+    <script src="js/donation.js"></script> 
+
+
+
+</body>
+</html>

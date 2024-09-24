@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Cordis - [Nombre de la Página]</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS desde CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Fuentes de Google -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+   <!-- Inicio de la Barra Superior (Fija) -->
+   <div class="container-fluid top-bar fixed-top">
+    <div class="row gx-0 align-items-center justify-content-between">
+        <!-- Enlaces de Contacto a la Izquierda -->
+        <div class="col-lg-8 col-md-6 text-left">
+            <div class="d-inline-flex align-items-center">
+                <a href="https://maps.app.goo.gl/SKhMN9ZjZyA8GUUD8" target="_blank"><i
+                        class="fas fa-map-marker-alt"></i> Encuéntranos</a>
+                <a href="mailto:fundacioncordisoperaciones@gmail.com"><i class="fas fa-envelope"></i>
+                    fundacioncordisoperaciones@gmail.com</a>
+            </div>
+        </div>
+        <!-- Iconos de Redes Sociales a la Derecha -->
+        <div class="col-lg-4 col-md-6 text-right">
+            <div class="d-inline-flex align-items-center">
+                <a href="https://www.facebook.com/fundacioncordisecuador" class="btn btn-square border"
+                    target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/fundacioncordis" class="btn btn-square border" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/593999065740" class="btn btn-square border" target="_blank"><i
+                        class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin de la Barra Superior -->
+
+
+    <!-- Inicio de la Barra de Navegación (Fija) -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0 fixed-top"
+            style="top: 45px;"> <!-- Ajustamos el top para que no solape con la barra superior -->
+            <!-- Logo y Nombre de la Fundación -->
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logoFC.png" alt="Logo Fundación Cordis" class="logo-img">
+                <h1 class="d-inline"><span>Fundación</span> Cordis</h1>
+            </a>
+
+            <!-- Menú Hamburguesa para Dispositivos Móviles -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <!-- Enlaces a las Secciones de la Página -->
+                    <a href="index.html" class="nav-item nav-link" id="inicio-link">Inicio</a>
+                    <a href="about.html" class="nav-item nav-link" id="about-link">Acerca de Nosotros</a>
+                    <a href="services.html" class="nav-item nav-link" id="services-link">Servicios</a>
+                    <a href="contact.html" class="nav-item nav-link" id="contact-link">Contacto</a>
+
+                </div>
+                <!-- Botón de Donar -->
+                <a href="donate.html"
+                    class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Donar Ahora</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Fin de la Barra de Navegación Fija -->
+
+    <!-- Ajuste en el contenido para que no se superponga con la barra fija -->
+    <div style="margin-top: 110px;">
+        <!-- Contenido de la página -->
+    </div>
+
+
+
+
+    <!-- Sección de Portada (Hero Section) -->
+    <section class="hero-section d-flex align-items-center text-center"
+        style="min-height: 80vh; background-image: url('img/index1.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="overlay"
+            style="background: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </div>
+        <div class="container position-relative z-index-2">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 text-white font-weight-bold animate__animated animate__fadeInDown">Apoya
+                        Nuestra Causa</h1>
+                    <p class="lead text-white mb-4 animate__animated animate__fadeInUp">
+                        En la Fundación Cordis, promovemos la inclusión social, el empoderamiento y la mejora de la
+                        calidad de vida de las personas en situación de vulnerabilidad. Con tu ayuda, podemos seguir
+                        transformando vidas.
+                    </p>
+                    <a href="donate.html"
+                        class="btn btn-warning btn-lg rounded-pill text-dark animate__animated animate__zoomIn">
+                        Dona y Haz la Diferencia
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="py-5 bg-white">
+        <div class="container">
+            <!-- Título de la sección -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title text-uppercase text-dark font-weight-bold mb-4">Nuestros Servicios</h2>
+                    <p class="text-muted">Brindamos una amplia gama de servicios diseñados para apoyar a personas con
+                        discapacidades, sus familias y la comunidad en general.</p>
+                </div>
+            </div>
+
+            <!-- Área de Servicios -->
+            <div class="row">
+                <!-- Servicio 1: Área de Capacitación -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-box shadow p-4 text-center h-100">
+                        <div class="icon-circle mb-3">
+                            <i class="fas fa-chalkboard-teacher fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="service-title mb-3">Área de Capacitación</h4>
+                        <p class="service-description text-muted">Capacitación inclusiva para el desarrollo personal y
+                            profesional.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Atención Psicológica -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-box shadow p-4 text-center h-100">
+                        <div class="icon-circle mb-3">
+                            <i class="fas fa-user-md fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="service-title mb-3">Atención Psicológica</h4>
+                        <p class="service-description text-muted">Apoyo psicológico individual y grupal para bienestar
+                            emocional.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Atención Educativa -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-box shadow p-4 text-center h-100">
+                        <div class="icon-circle mb-3">
+                            <i class="fas fa-graduation-cap fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="service-title mb-3">Atención Educativa</h4>
+                        <p class="service-description text-muted">Programas educativos inclusivos y accesibles para
+                            todos.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: Atención en Salud -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-box shadow p-4 text-center h-100">
+                        <div class="icon-circle mb-3">
+                            <i class="fas fa-heartbeat fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="service-title mb-3">Atención en Salud</h4>
+                        <p class="service-description text-muted">Servicios médicos integrales para mejorar la calidad
+                            de vida.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 5: Apoyo Comunitario -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-box shadow p-4 text-center h-100">
+                        <div class="icon-circle mb-3">
+                            <i class="fas fa-hands-helping fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="service-title mb-3">Apoyo Comunitario</h4>
+                        <p class="service-description text-muted">Iniciativas comunitarias para mejorar la cohesión
+                            social.</p>
+                    </div>
+                </div>
+
+                <!-- Servicios completos -->
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-box shadow p-4 text-center h-100">
+                        <p class="service-description text-muted" style="font-size: 1.3rem;">
+                            Cada uno de nuestros servicios está diseñado para brindar apoyo y mejorar la calidad de vida de nuestra comunidad.
+                        </p>
+                        <a href="services.html" class="btn btn-primary mt-3" style="font-size: 1.1rem;">
+                            Descubre Todos Nuestros Servicios
+                        </a>
+                    </div>
+                </div>
+                
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Sección de Testimonios -->
+    <section class="testimonials-section bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center mb-5">
+                    <h2 class="section-title text-uppercase">Testimonios</h2>
+                    <p class="text-muted">Lo que dicen sobre nosotros...</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial bg-white p-4 shadow-sm animate__animated animate__fadeInLeft">
+                        <p class="text-muted">"La Fundación Cordis ha cambiado mi vida. Gracias a ellos, he encontrado
+                            un nuevo camino."</p>
+                        <p class="text-primary font-weight-bold">- Testimonio 1</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial bg-white p-4 shadow-sm animate__animated animate__fadeInUp">
+                        <p class="text-muted">"No puedo agradecer lo suficiente por el apoyo recibido. ¡Son un equipo
+                            increíble!"</p>
+                        <p class="text-primary font-weight-bold">- Testimonio 2</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial bg-white p-4 shadow-sm animate__animated animate__fadeInRight">
+                        <p class="text-muted">"Su dedicación y esfuerzo han marcado una gran diferencia en mi
+                            comunidad."</p>
+                        <p class="text-primary font-weight-bold">- Testimonio 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Sección de Llamado a la Acción -->
+    <section id="call-to-action" class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h2 class="mb-4">¿Listo para Hacer la Diferencia?</h2>
+            <p class="mb-4">Tu apoyo puede cambiar vidas. Únete a nosotros en esta causa.</p>
+            <a href="donate.html" class="btn btn-light btn-lg rounded-pill">Dona Ahora</a>
+        </div>
+    </section>
+    <!-- Fin de la Sección de Llamado a la Acción -->
+
+    <!-- Inicio del Pie de Página (Footer) -->
+<footer class="bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Información de la Fundación -->
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-4">Fundación Cordis</h5>
+                <p>Nuestra misión es apoyar y respaldar a las personas con discapacidades.</p>
+                <!-- Iconos de Redes Sociales -->
+                <div class="d-flex">
+                    <a href="https://www.facebook.com/fundacioncordisecuador" class="btn btn-square border" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/fundacioncordis" class="btn btn-square border" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/593999065740" class="btn btn-square border" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <!-- Enlaces Rápidos -->
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-4">Enlaces Rápidos</h5>
+                <ul class="list-unstyled">
+                    <li><a href="about.html" class="text-light"><i class="fas fa-angle-right me-2"></i>Acerca de Nosotros</a></li>
+                    <li><a href="contact.html" class="text-light"><i class="fas fa-angle-right me-2"></i>Contacto</a></li>
+                    <li><a href="services.html" class="text-light"><i class="fas fa-angle-right me-2"></i>Servicios</a></li>
+                    <li><a href="donate.html" class="text-light"><i class="fas fa-angle-right me-2"></i>Donaciones</a></li>
+                </ul>
+            </div>
+            <!-- Información de Contacto -->
+            <div class="col-lg-4 col-md-12">
+                <h5 class="mb-4">Contacto</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-map-marker-alt me-2"></i> Quito, Ecuador</li>
+                    <li><i class="fas fa-envelope me-2"></i> fundacioncordisoperaciones@gmail.com</li>
+                    <li><i class="fas fa-phone me-2"></i> +593 0999056740</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-4">
+        <!-- Derechos Reservados -->
+        <div class="text-center">
+            &copy; 2024 Fundación Cordis. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+<!-- Fin del Pie de Página -->
+
+
+
+
+
+    <!-- Bootstrap JS y dependencias desde CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  
+
+    <!-- Scripts Propios -->
+    <script src="js/menu.js"></script>
+
+</body>
+
+</html>

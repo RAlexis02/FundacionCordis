@@ -1,0 +1,1614 @@
+/* ================================================================
+   Variables Globales
+================================================================ */
+:root {
+    --color-primary: #4BA6A8;
+    /* Turquesa del logo */
+    --color-secondary: #F08240;
+    /* Naranja del logo */
+    --color-light: #FFFFFF;
+    /* Blanco */
+    --color-dark: #333333;
+    /* Gris oscuro */
+    --color-gray: #F0F0F0;
+    /* Gris claro */
+}
+
+/* ================================================================
+   Estilos Globales
+================================================================ */
+body {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    font-family: 'Poppins', sans-serif;
+    /* Fuente principal */
+    font-size: 18px;
+    /* Tamaño de fuente para accesibilidad */
+    line-height: 1.6;
+    /* Altura de línea para mejorar la legibilidad */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-dark);
+    font-family: 'Playfair Display', serif;
+    /* Fuente para encabezados */
+    line-height: 1.4;
+    /* Mejora la legibilidad de los encabezados */
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+
+/* ================================================================
+   Barra Superior
+================================================================ */
+.top-bar {
+    background-color: #252636;
+    /* Fondo oscuro */
+    color: #ffffff;
+    font-size: 16px;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.top-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.top-bar a i {
+    margin-right: 5px;
+    color: var(--color-primary);
+}
+
+.top-bar .btn-square {
+    background-color: #ffffff;
+    color: #333333;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 12px;
+    border: 2px solid var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-bar .btn-square i {
+    font-size: 1.4rem;
+    color: #333333;
+}
+
+.top-bar .btn-square:hover {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+/* Mantener la barra visible y responsiva */
+@media (max-width: 768px) {
+    .top-bar {
+        font-size: 14px;
+    }
+    .top-bar .col-lg-8 {
+        display: none; /* Esto oculta Encuéntranos y el correo en pantallas pequeñas */
+    }
+}
+
+/* Alinear redes sociales a la derecha en todas las pantallas */
+@media (min-width: 768px) {
+    .top-bar .col-lg-4 {
+        text-align: right;
+    }
+}
+
+
+
+
+
+/* ================================================================
+   Barra de Navegación
+================================================================ */
+.navbar {
+    background-color: var(--color-light);
+    /* Fondo blanco */
+    border-bottom: 1px solid var(--color-secondary);
+    /* Borde inferior naranja */
+    padding-top: 10px;
+    /* Espaciado superior */
+    padding-bottom: 10px;
+    /* Espaciado inferior */
+    position: sticky;
+    /* Asegura que la barra sea "sticky" */
+    top: 0;
+    /* Cambiado para eliminar el espacio */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra opcional */
+    margin-bottom: 0;
+    /* Elimina cualquier margen inferior */
+    overflow: hidden;
+    /* Prevenir el colapso de márgenes */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    /* Añadir espacio a la derecha del logo */
+}
+
+.navbar-brand h1 {
+    color: var(--color-primary);
+    font-size: 28px;
+    /* Restaurar tamaño del texto del logo */
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    /* Fuente para el logo */
+}
+
+.logo-img {
+    max-width: 60px;
+    /* Restaurar el tamaño del logo */
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    /* Espacio entre el logo y el texto */
+    margin-bottom: 0;
+    /* Asegura que no haya margen inferior */
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+    /* Alinea los elementos de la navegación a la derecha */
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-dark);
+    font-weight: bold;
+    margin-left: 15px;
+    /* Reducir el espaciado adicional */
+    margin-right: 15px;
+    /* Reducir el espaciado adicional */
+    font-size: 1rem;
+    /* Reducir el tamaño de fuente para la navegación */
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--color-primary);
+    /* Color del enlace activo */
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-primary);
+    /* Subrayado del enlace activo */
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-secondary);
+    /* Color al pasar el ratón */
+}
+
+/* Botón de Donación */
+.btn-primary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-light);
+    padding: 10px 25px;
+    /* Ajustar el padding */
+    font-size: 1rem;
+    /* Ajustar el tamaño de fuente del botón */
+}
+
+.btn-primary:hover {
+    background-color: #D96B35;
+    /* Un tono más oscuro del naranja */
+    border-color: #D96B35;
+}
+
+
+
+
+/* ================================================================
+   Sección Principal (Hero Section)
+================================================================ */
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Sombra y ajuste de la superposición */
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    /* Ajuste de la sombra para mayor legibilidad */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Estilo de los textos */
+.hero-section .container {
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+    animation-duration: 1s;
+}
+
+.hero-section p {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    padding: 12px 35px;
+    font-size: 1.25rem;
+    color: #000;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.5);
+    margin-top: 20px;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.7);
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.4rem;
+    }
+
+    .btn-warning {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    /* Desactivar el background fijo en pantallas pequeñas */
+    .hero-section {
+        background-attachment: scroll;
+        background-size: cover;
+        /* Asegura que la imagen cubra el espacio */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .btn-warning {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}
+
+
+
+
+
+
+
+/* ================================================================
+   Sección de Servicios Destacados (Index)
+================================================================ */
+/* ================================================================
+   Sección de Servicios
+================================================================ */
+.service-box {
+    background-color: #fff;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.service-title {
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.service-description {
+    font-size: 1rem;
+    color: #666;
+}
+
+.service-box .btn-outline-primary {
+    border: 1px solid #007bff;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.service-box .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .service-title {
+        font-size: 1.2rem;
+    }
+
+    .service-description {
+        font-size: 0.95rem;
+    }
+
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+/* Ajustar el tamaño de la letra */
+.service-cta p {
+    font-size: 1rem;  /* Ajuste a un tamaño más pequeño */
+    color: #555;  /* Color gris suave */
+    font-weight: 400;  /* Mantener el peso ligero */
+    line-height: 1.6;  /* Mantener la legibilidad */
+    margin-bottom: 10px;  /* Reducir el margen inferior */
+}
+
+/* Ajustar el botón y su espaciado */
+.service-cta .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin-top: 10px; /* Reducir el margen superior para acercarlo al texto */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.service-cta .btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Ajuste del contenedor del texto */
+.service-cta {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+/* ================================================================
+   Sección de Testimonios (Index)
+================================================================ */
+.testimonials-section {
+    background-color: var(--color-light);
+    padding: 60px 0;
+}
+
+.testimonial {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial::before {
+    content: '“';
+    font-size: 4rem;
+    color: var(--color-primary);
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    opacity: 0.2;
+}
+
+.testimonial p {
+    font-size: 1rem;
+    color: var(--color-muted);
+}
+
+.testimonial .font-weight-bold {
+    color: var(--color-primary);
+    margin-top: 15px;
+    display: block;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 767px) {
+    .testimonial {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+/* ================================================================
+   Sección de Llamado a la Acción
+================================================================ */
+#call-to-action {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 50px 0;
+}
+
+#call-to-action h2 {
+    font-family: 'Playfair Display', serif;
+    /* Fuente para encabezados */
+}
+
+#call-to-action p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+#call-to-action .btn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background-color: var(--color-secondary);
+    border: none;
+}
+
+#call-to-action .btn:hover {
+    background-color: #D96B35;
+    color: var(--color-light);
+}
+
+/* ================================================================
+   ABOUT
+================================================================ */
+/* ================================================================
+   Sección de Nuestra Historia Mejorada
+================================================================ */
+
+/* Fondo blanco con sombras sutiles */
+.bg-gradient {
+    background: #f8f9fa; /* Color de fondo suave */
+}
+
+/* Contenedor de video con sombra y padding ajustado */
+.video-container {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px; /* Reducir tamaño del video */
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en el video */
+.video-container:hover {
+    transform: scale(1.03);
+}
+
+/* Contenedor de texto con fondo blanco y sombra suave */
+.history-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Títulos y textos principales */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.text-muted {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 100%; /* Ajusta el video al 100% en pantallas pequeñas */
+    }
+    
+    .history-content {
+        text-align: center; /* Centra el texto en dispositivos móviles */
+    }
+}
+
+
+
+/* ================================================================
+   Estilos para la sección Misión, Visión y Valores
+================================================================ */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+/* Asegurando que todos los cuadros sean del mismo tamaño */
+.card {
+    min-height: 280px;
+}
+
+/* Ajustes de responsividad */
+@media (max-width: 768px) {
+    .card {
+        min-height: auto;
+    }
+}
+
+
+/* ================================================================
+   Sección El Equipo
+================================================================ */
+.team-member {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 8px;
+    text-align: center; /* Centramos el contenido */
+    padding: 20px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Para foto estilo carnet, ahora centrada */
+.team-member img {
+    border-radius: 50%; /* Foto circular */
+    width: 150px; /* Tamaño estilo carnet */
+    height: 150px; /* Aseguramos que sea cuadrada */
+    object-fit: cover; /* Asegura que la imagen cubra todo el área */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+    display: block; /* Para centrar la imagen */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+    /* Efecto de zoom suave en la imagen */
+}
+
+/* Para el título del miembro del equipo */
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Para el puesto del miembro */
+.card-text.text-primary {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+/* Para la biografía del miembro */
+.card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Ajuste de responsividad */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text.text-primary {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+/* Estilos para la Sección de Reconocimientos y Alianzas */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la sección de imágenes de alianzas */
+.card img {
+    max-width: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Asegura que los logos sean circulares */
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ================================================================
+   Estilos específicos para la grilla de Reconocimientos y Alianzas
+================================================================ */
+
+/* Títulos y textos */
+h3.text-center.text-primary {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Ajustes responsivos */
+
+/* Para pantallas medianas (tablets) */
+@media (max-width: 992px) {
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    h3.text-center.text-primary {
+        font-size: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+    }
+
+    /* Aumentar el espacio entre las tarjetas en pantallas pequeñas */
+    .card {
+        margin-bottom: 20px;
+    }
+
+    /* Ajustar el tamaño del círculo en pantallas pequeñas */
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Las imágenes de las alianzas se ajustan mejor en móviles */
+    .card img {
+        max-width: 80px;
+    }
+}
+
+/* Para pantallas extra pequeñas (móviles muy pequeños) */
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .card-title {
+        font-size: 0.9rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+
+    .icon-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .card img {
+        max-width: 60px;
+    }
+}
+
+
+
+
+
+
+    /* ================================================================
+   Sección de Servicios
+================================================================ */
+
+    /* ================================================================
+   Sección de Introducción a los Servicios
+================================================================ */
+
+    /* Fondo claro */
+    .bg-light {
+        background-color: #f9f9f9;
+    }
+
+    /* Animación para el título */
+    .section-title {
+        font-size: 2.5rem;
+        color: #333;
+        animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    /* Animación de aparición */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ================================================================
+   Área de Capacitación
+================================================================ */
+    .section-title {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: #333;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 8px;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        /* Efecto hover para levantar la tarjeta */
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        /* Sombra más pronunciada al hacer hover */
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    .card-text {
+        color: #666;
+        font-size: 1rem;
+    }
+
+    .text-primary {
+        color: var(--color-primary) !important;
+    }
+
+    /* Animación de aparición */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ================================================================
+   Atención Psicológica
+================================================================ */
+    .section-title {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: #333;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 8px;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        /* Efecto hover para levantar la tarjeta */
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        /* Sombra más pronunciada al hacer hover */
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    .card-text {
+        color: #666;
+        font-size: 1rem;
+    }
+
+    .text-primary {
+        color: var(--color-primary) !important;
+    }
+
+    /* Animación de aparición */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ================================================================
+   Atención Educativa
+================================================================ */
+    .section-title {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: #333;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 8px;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        /* Efecto hover para levantar la tarjeta */
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        /* Sombra más pronunciada al hacer hover */
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    .card-text {
+        color: #666;
+        font-size: 1rem;
+    }
+
+    .text-primary {
+        color: var(--color-primary) !important;
+    }
+
+    /* Animación de aparición */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ================================================================
+   Atención en Salud
+================================================================ */
+    .section-title {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: #333;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 8px;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        /* Efecto hover para levantar la tarjeta */
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        /* Sombra más pronunciada al hacer hover */
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    .card-text {
+        color: #666;
+        font-size: 1rem;
+    }
+
+    .text-primary {
+        color: var(--color-primary) !important;
+    }
+
+    /* Animación de aparición */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    
+    /* ================================================================
+   contacto
+================================================================ */
+/* ================================================================
+   Sección de Introducción / Bienvenida
+================================================================ */
+.welcome-section {
+    background-color: #f0f4f8;
+    padding: 40px 0;
+}
+
+.welcome-section .section-title {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+
+/* ================================================================
+   Estilos para la Sección de Contacto
+================================================================ */
+.contact-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+.contact-details li {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-details i {
+    margin-right: 15px;
+    color: #007bff;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+
+
+
+  
+
+}
+
+
+.contact-email a {
+    display: inline;
+    word-break: normal; /* Prevenir el corte de palabras */
+}
+
+.email-local {
+    word-break: break-all;
+    /* Permitir romper la primera parte si es muy larga */
+}
+
+.email-domain {
+    display: inline-block;
+    word-break: break-word;
+    /* Aseguramos que el dominio pase a la siguiente línea */
+}
+
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    /* Elimina 'word-break' para las demás partes */
+}
+
+.contact-details {
+    word-wrap: break-word; /* Esto sigue funcionando globalmente */
+}
+
+
+
+
+.contact-info a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #ccc;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 30px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+
+
+/* Estilos para las redes sociales */
+/* Ajustes para los iconos de redes sociales */
+.social-icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease; /* Transición para el color del texto */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Color azul como los otros íconos */
+}
+
+.social-icons .icon-wrapper {
+    background-color: var(--color-light); /* Fondo claro */
+    color: #007bff; /* Azul para los iconos dentro del círculo */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border: 2px solid #007bff; /* Borde azul claro */
+    transition: transform 0.3s ease; /* Transición suave para hacer zoom */
+}
+
+.social-icons .icon-wrapper i {
+    font-size: 1.5rem;
+    color: #007bff; /* Asegurar que el color del icono sea azul */
+}
+
+/* Efecto hover: solo agranda el icono suavemente */
+.social-icons a:hover .icon-wrapper {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+/* Mantener el mismo color en el texto y los iconos */
+.social-icons a:hover {
+    color: #007bff; /* El texto mantiene el mismo azul */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para la sección del mapa */
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón de Obtener Direcciones */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Pop-up personalizado del mapa */
+.leaflet-popup-content h5 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.leaflet-popup-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+.leaflet-popup-content img {
+    border-radius: 8px;
+}
+
+/* Estilo para el título de la sección de contacto */
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Ajustes para el diseño de dos columnas en pantallas grandes */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.contact-details-container, .form-container {
+    width: 48%; /* Dividir el ancho en dos partes */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .map-container {
+        height: 300px; /* Ajusta el tamaño del mapa para pantallas más pequeñas */
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .contact-section {
+        display: block;
+    }
+
+    .contact-details-container, .form-container {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
+    /* ================================================================
+   Sección de Donaciones
+================================================================ */
+/* Encabezado Inspirador */
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.lead {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+
+
+    .donation-btn {
+        background-color: var(--color-primary);
+        color: var(--color-light);
+        border: none;
+        padding: 15px 25px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .donation-btn:hover {
+        background-color: #1F7A7A;
+        /* Color más oscuro al pasar el ratón */
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .donation-btn:active,
+    .donation-btn.active {
+        background-color: #004f4f;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2) inset;
+    }
+
+    .donation-container {
+        background-color: var(--color-light);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .donation-container p {
+        font-size: 1rem;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        color: var(--color-dark);
+    }
+
+    #custom-amount {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        border: 2px solid var(--color-primary);
+        font-size: 1rem;
+    }
+
+    /* Contenedor de donación personalizada */
+    #custom-amount-container {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    /* Indicador de selección clara */
+    .donation-btn.active {
+        background-color: #4CAF50;
+        /* Color más destacable */
+        border: 2px solid #4CAF50;
+        color: white;
+    }
+
+    /* Mensaje de error visible */
+    #error-message {
+        color: red;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    /* Mensaje de donación */
+    #donation-message {
+        font-size: 1.2em;
+        margin-top: 10px;
+        text-align: center;
+        /* Alineación centrada para mejor legibilidad */
+        color: var(--color-dark);
+        /* Asegura que el texto sea oscuro y legible */
+    }
+
+    /* Botón de PayPal */
+    #paypal-button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
+        /* Asegura que el contenedor ocupe todo el ancho disponible */
+    }
+
+    .paypal-button {
+        font-size: 1.1rem;
+        padding: 15px 25px;
+        background-color: #FFC107;
+        /* Color del botón de PayPal */
+        border-radius: 8px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+        /* Asegura que el botón no se extienda más allá del contenedor */
+        padding: 12px 20px;
+        /* Ajusta el padding para pantallas pequeñas */
+    }
+
+    .paypal-button:hover {
+        background-color: #E0A800;
+        /* Color más oscuro al pasar el ratón */
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Alineación y responsividad */
+    .donation-selection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .donation-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .donation-btn {
+            width: 80%;
+            /* Ajusta el ancho a 80% en lugar de 100% */
+            max-width: 250px;
+            /* Limita el ancho máximo de los botones */
+            margin: 5px auto;
+            /* Centrar y agregar un margen superior e inferior */
+        }
+
+        #custom-amount {
+            width: 90%;
+            /* Ajusta el ancho del campo en pantallas pequeñas */
+        }
+    }
+
+
+/* ================================================================
+   Pie de Página Mejorado
+================================================================ */
+footer {
+    background-color: #252636;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+footer h5 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+footer p, footer li {
+    color: #b5b5b5;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--color-secondary);
+}
+
+footer .btn-square {
+    background-color: #ffffff;
+    color: #333333;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #ffffff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer .btn-square i {
+    font-size: 1.5rem;
+}
+
+footer .btn-square:hover {
+    background-color: var(--color-secondary);
+    color: #ffffff;
+}
+
+/* Mejoras para responsividad */
+@media (max-width: 768px) {
+    footer .col-lg-4 {
+        margin-bottom: 30px;
+    }
+
+    footer .btn-square {
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+
+    footer p, footer li {
+        text-align: center;
+    }
+
+    footer .text-center {
+        text-align: center;
+    }
+}
+
+
